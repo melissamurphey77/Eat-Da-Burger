@@ -28,7 +28,7 @@
 
                 </div>  <!--CLOSING 2ND ROW-->
             </div>
-
+                <!--CHANGING STATUS SAYING IF "THIS" BURGER IS DEVOURED, MAKE AS READ ONLY, NON CLICKABLE-->
              <div class ="col-xs-6 text center" class="task">
                  {{#each burger_data}}
                  {{#if this.devoured}}
@@ -39,3 +39,18 @@
         </div>  <!--CLOSING 1ST ROW-->
 
 </div>  <!--CLOSING CONTAINER-->
+
+<!--NEW CONTAINER FOR SUBMITTING NEW BURGERS-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 text center enter_section">
+            <form action="/burgers/create" method="POST">
+                <input type="text" name="burger_name" class="form-control" value="" id="enter_text">
+                <button type="submit" class="btn btn-primary" id="text-enter-button">SUBMIT</button>
+                
+            </form>
+            <p>HANGRY? Type a burger you wanna eat!</p>
+        </div>
+    </div>
+</div>
