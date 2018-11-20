@@ -27,7 +27,15 @@
                 {{/each}}
 
                 </div>  <!--CLOSING 2ND ROW-->
-            </div>  
+            </div>
+
+             <div class ="col-xs-6 text center" class="task">
+                 {{#each burger_data}}
+                 {{#if this.devoured}}
+                 <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+                 {{/if}}
+                 {{/each}}
+             </div> 
         </div>  <!--CLOSING 1ST ROW-->
 
 </div>  <!--CLOSING CONTAINER-->
